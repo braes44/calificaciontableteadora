@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificación Tableteadora </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calificación de Operación - Tableteadora </h1>
+    </header>
+
+    <main>
+        <section id="informacion-inicial">
+            <h2>Información del Protocolo</h2>
+            <form id="form-informacion">
+                <label for="codigo-protocolo">Código del Protocolo:</label>
+                <input type="text" id="codigo-protocolo" name="codigo-protocolo" placeholder="Ingrese el código del protocolo" required>
+
+                <label for="fecha-protocolo">Fecha:</label>
+                <input type="date" id="fecha-protocolo" name="fecha-protocolo" required>
+
+                <label for="nombre-analista">Nombre del Analista:</label>
+                <input type="text" id="nombre-analista" name="nombre-analista" placeholder="Ingrese el nombre del analista" required>
+
+                <label for="laboratorio">Laboratorio:</label>
+                <input type="text" id="laboratorio" name="laboratorio" placeholder="Ingrese el nombre del laboratorio" required>
+
+                <label for="logo-laboratorio">Logo del Laboratorio:</label>
+                <input type="file" id="logo-laboratorio" name="logo-laboratorio" accept="image/*" onchange="mostrarLogo()">
+                <div id="logo-preview" class="imagen-preview"></div>
+            </form>
+        </section>
+
+        <section id="pruebas">
+            <h2>Pruebas de Operación</h2>
+            <div id="lista-pruebas"></div>
+        </section>
+
+        <button id="btn-imprimir" onclick="imprimirPagina()">Imprimir Reporte</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
